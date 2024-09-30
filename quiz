@@ -1,30 +1,18 @@
+
 import random
-b = "b"
-d = "d"
-c = "c"
 int = acerto = 0
-p1 = print("1. Qual símbolo é usado para comentários de uma linha em Python? \n a) //  \n b) #  \n c) /* \n d) --  \n")
-r1 = input("Qual a alternativa correta?")
-if(r1 == b):
-   acerto += 1
-print("proxima pergunta")
-p2 = print("2. Qual função é usada para imprimir texto na tela em Python? \n a) show()  \n b) display()  \n c) console.log() \n d) print()  \n")
-r2 = input("Qual a alternativa correta?")
-if(r2 == d):
-    acerto += 1
-print("proxima pergunta")
-p3 = print("3. Qual estrutura de dados em Python é mais semelhante a um array em outras linguagens?  \na) Tupla \n b) Dicionário \n c) Array \n d) Set \n")
-r3 = input("Qual a alternativa correta?")
-if(r3 == c):
-     acerto += 1
-print("proxima pergunta")
-p4 = print("4. Qual palavra-chave é usada para definir uma função em Python?  \n a) function \n b) def \n c) func \n d) define \n")
-r4 = input("Qual a alternativa correta?")
-if(r4 == d):
-    acerto += 1
-print("proxima pergunta")
-p5 = print("5. Qual operador é usado para verificar igualdade em Python? \n a) = \n b) === \n c) == \n d) .equals() \n ")
-r5 = input("Qual a alternativa correta?")
-if(r5 == c):
-   acerto += 1
+quiz = [['Qual símbolo é usado para comentários de uma linha em Python?',['a','b','c','d'],['//','#','/*','--'],"#"],
+        ['Qual função é usada para imprimir texto na tela em Python?',['a','b','c','d'],['show()','display()','console.log()','print()'],'print()'],
+        ['Qual estrutura de dados em Python é mais semelhante a um array em outras linguagens?',['a','b','c','d'],['Tupla','Dicionário','Array','Set'],'Array'],
+        ['Qual palavra-chave é usada para definir uma função em Python?',['a','b','c','d'],['function','def','func','define'],'def'],
+        ['Qual operador é usado para verificar igualdade em Python?',['a','b','c','d'],['=','===','==','.equals()'],'==']
+        ]
+random.shuffle(quiz)
+for i in range(len(quiz)):
+    print(quiz[i][0])
+    for j in range(len(quiz[i][1])):
+        print(quiz[i][1][j], quiz[i][2][j])
+    r = input("Qual a alternativa correta?")
+    if(r == quiz[i][3]):
+        acerto += 1
 print(f"Parabens você finalizou o quiz \n voçê acertou {acerto}/5")
